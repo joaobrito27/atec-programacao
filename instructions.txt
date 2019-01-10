@@ -1,0 +1,12 @@
+// https://github.com/mikasonwar
+
+git bash here
+
+	git add -A
+	git commit -m "mensagem de commit"
+	git push
+
+// necessario mas nao sempre
+
+	git pull
+	git status
