@@ -11,7 +11,7 @@ namespace ExA
         static void Main(string[] args)
         {
             int n = 0;
-
+            
             string[] vec = new string[n];
 
             for (int i = 0; i < n; i++)
@@ -34,6 +34,8 @@ namespace ExA
                 Console.WriteLine("| [5] - Escrever Vec das Strings - []                  |");
                 Console.WriteLine("| [6] - Maior String - [E]                             |");
                 Console.WriteLine("| [7] - Será que têm o mesmo comprimento? - [F]        |");
+                Console.WriteLine("| [8] - Soma do comprimento - [G]                      |");
+                Console.WriteLine("| [9] - Trocar 'v' por 'b' e 'ão' por 'om' - [H]        |");
                 Console.WriteLine("| [0] Sair do Programa                                 |");
                 Console.WriteLine("<------------------------------------------------------>");
                 Console.Write("Digite uma opção: ");
@@ -63,11 +65,29 @@ namespace ExA
                         Console.WriteLine("Prima qualquer tecla para voltar ao menu...");
                         break;
                     case 7:
-                        mesmaDim(n, vec);
+                        if (!mesmaDim(n, vec)) //se for falso
+                        {
+                            Console.WriteLine("As strings introduzidas não são iguais.");
+                        }
+                        else //se for verdade
+                        {
+                            Console.WriteLine("As strings introduzidas são iguais.");
+                        }
+                        Console.WriteLine("Prima qualquer tecla para voltar ao menu...");
+                        break;
+                    case 8:
+                        if (somarStrings(n, vec) > 0)
+                        {
+                            Console.Write("Soma das Lenghts: " + somarStrings(n, vec) + ".");
+                        }
+                        Console.WriteLine("Prima qualquer tecla para voltar ao menu...");
+                        break;
+                    case 9:
+                        substituirString();
                         Console.WriteLine("Prima qualquer tecla para voltar ao menu...");
                         break;
                     default:
-                        saiPrograma();
+                        sairPrograma();
                         break;
                 }
                 Console.ReadKey();
@@ -116,7 +136,7 @@ namespace ExA
         }
 
 
-        private static void saiPrograma()
+        private static void sairPrograma()
         {
             Console.WriteLine();
             Console.WriteLine("Saiu do programa. Clique qualquer tecla para fechar...");
@@ -169,10 +189,10 @@ namespace ExA
             
             string maiorString = "";
 
-             for (int i = 0; i < n; i++) //percorrer todo o vetor
-            {
-                int dimensao = vec[0].Length; //a variavel "dimensao" guarda o numero de carateres do vec[0]
+            int dimensao = vec[0].Length; //a variavel "dimensao" guarda o numero de carateres do vec[0]
 
+            for (int i = 0; i < n; i++) //percorrer todo o vetor
+            {
                 if (vec[i].Length > dimensao) //Comparar cada posicao do vetor com a variavel "dimensao" que guarda o tamanho da posicao inicial
                     maiorString = vec[i]; //guardar o maior tamanho na variavel "maior string"                  
             }
@@ -183,7 +203,65 @@ namespace ExA
 
         private static bool mesmaDim(int n, string[] vec)
         {
+
+            //F. Crie uma função que receba um vector de strings como argumento e retorne um valor booleano indicando se todas as strings têm o mesmo comprimento.
+
+            int contStrings = 0;
+
+            int dimensao = vec[0].Length; //a variavel "dimensao" guarda o numero de carateres do vec[0]
+
+            for (int i = 0; i < n; i++) //percorrer todo o vetor
+            {
+                if (vec[i].Length == dimensao) //Comparar cada posicao do vetor com a variavel "dimensao" que guarda o tamanho da posicao inicial
+                    contStrings++;  //contar as vezes que tem o mesmo comprimento
+            }
+
+            if (contStrings == n) //se o valor da variavel "contStrings" for igual ao N de elementos do vetor significa que o tamanho é igual em todos (true).
+                return true;//retorna true se todos os elementos tiverem o mesmo tamanho
+            return false;//retorna false se os elementos nao tiverem o mesmo tamanho
+        }
+
+
+        private static int somarStrings(int n, string[] vec)
+        {
+            //G. Crie uma função que receba um vector de strings como argumento e retorne um valor inteiro correspondendo à soma de todos os comprimentos das strings.
+
+
+            int somaStrings = vec[0].Length; //a variavel "somaStrings" guarda todos os comprimentos das strings começando por vec[0]
+
+            for (int i = 1; i < n; i++) //percorrer todo o vetor
+            {
+                somaStrings += vec[i].Length; //Somar todos os comprimentos
+            }
+
+            return somaStrings; //retornar a soma de todos os comprimentos
+
+        }
+
+
+        private static void substituirString()
+        {
+
+            //H. Crie uma função que, numa string substitua todas as letras “v” por “b” e todas as ocorrências de “ão” por “om”.
+
+            Console.WriteLine("Digite a string para ser convertida: ");
+            string str = Console.ReadLine();
+
+
+            str=str.Replace('v', 'b').Replace('V', 'B');
+            str=str.Replace("ão", "om").Replace("ÃO", "OM");
+
+            Console.WriteLine(str);  
+        }
+
+
+        private static bool apenasalgarismos()
+        {
+            Console.WriteLine("Digite a string para ser convertida: ");
+            string str = Console.ReadLine();
+
             return true;
+
         }
 
     }
