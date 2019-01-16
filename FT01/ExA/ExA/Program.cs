@@ -180,6 +180,7 @@ namespace ExA
             Console.WriteLine("A string que tem o maior comprimento é " + maiorString + ".");
         }
 
+
         private static bool mesmaDim(int n, string[] vec)
         {
            
