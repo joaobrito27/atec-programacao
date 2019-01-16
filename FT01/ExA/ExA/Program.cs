@@ -183,7 +183,7 @@ namespace ExA
 
         private static bool mesmaDim(int n, string[] vec)
         {
-           
+            return true;
         }
 
     }
