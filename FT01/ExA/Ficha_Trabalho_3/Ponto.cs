@@ -9,7 +9,7 @@ namespace Ficha_Trabalho_3
     class Ponto
     {
         //Usando as Propriedades
-        //Auto Propriedade é quando retornamos algo sem validação*!
+        //Auto Propriedade é quando retornamos algo sem validação*! { get; set; }
         private int _x, _y;
 
         public Ponto()
