@@ -27,6 +27,12 @@ namespace Ficha_Trabalho_4
             Data dt2 = new Data(01, 12, 1999);
             Console.WriteLine("\nDiferença entre 2 anos: " + dt1.difEntre2anos(dt2));
 
+            Console.WriteLine("\n\t-----------------Conta-----------------");
+            Conta ct1 = new Conta();
+            ct1.depositar(200);
+
+            Console.WriteLine(ct1.toString());
+
             Console.ReadKey();
         }
     }

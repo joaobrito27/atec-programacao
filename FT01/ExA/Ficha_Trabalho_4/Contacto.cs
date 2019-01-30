@@ -224,7 +224,7 @@ namespace Ficha_Trabalho_4
             int idade = DateTime.Now.Year - dataNasc.setAno; 
 
             //verifica se já chegou ao dia de aniversário definido na Data
-            if ((_dataNasc.setMes > DateTime.Now.Month) || (_dataNasc.setMes == DateTime.Now.Month && _dataNasc.setDia > DateTime.Now.Day)) 
+            if ((dataNasc.setMes > DateTime.Now.Month) || (dataNasc.setMes == DateTime.Now.Month && dataNasc.setDia > DateTime.Now.Day)) 
                 idade--;
 
             return idade;
