@@ -8,8 +8,8 @@ namespace Ficha_Trabalho_3
 {
     class Ponto
     {
+        //Auto Propriedade é quando retornamos algo sem validação*! É escrita com maiuscula por exemplo: private string Titular { get; set; }
         //Usando as Propriedades
-        //Auto Propriedade é quando retornamos algo sem validação*! { get; set; }
         private int _x, _y;
 
         public Ponto()

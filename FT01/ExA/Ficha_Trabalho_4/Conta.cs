@@ -122,7 +122,6 @@ namespace Ficha_Trabalho_4
                 Console.WriteLine("O crédito é 30% do valor do saldo.");
                 return _saldo * 0.3;
             }
-
             else if (_saldo >= 500)
             {
                 Console.WriteLine("O crédito é 10% do valor do saldo.");
