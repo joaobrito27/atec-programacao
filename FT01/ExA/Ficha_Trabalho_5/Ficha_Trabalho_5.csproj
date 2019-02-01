@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E28D8508-917E-49F5-9045-5282C9465670}</ProjectGuid>
+    <ProjectGuid>{02A46E4C-8E23-4AD7-8031-537509EBA301}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Ficha_Trabalho_4</RootNamespace>
-    <AssemblyName>Ficha_Trabalho_4</AssemblyName>
+    <RootNamespace>Ficha_Trabalho_5</RootNamespace>
+    <AssemblyName>Ficha_Trabalho_5</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,12 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conta.cs" />
-    <Compile Include="Contacto.cs" />
-    <Compile Include="ContactoDois.cs" />
-    <Compile Include="Data.cs" />
-    <Compile Include="Empresa.cs" />
-    <Compile Include="Pessoa.cs" />
+    <Compile Include="Funcionario.cs" />
+    <Compile Include="Gerente.cs" />
+    <Compile Include="Operario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
