@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 namespace Ficha_Trabalho_5
 {   //uma classe abstract não pode instaciar objetos no main.
     //https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members
+
     abstract class Funcionario
     {
         protected int _id;
         protected double _valorHora;
         protected string _nome;
         protected string _email;
-        protected Data DataNasc { get; set; } //Auto-Propriedade
+        public Data DataNasc { get; set; } //Auto-Propriedade
             
         public Funcionario()
         {
