@@ -14,7 +14,7 @@ namespace Ficha_Trabalho_5
         protected double _valorHora;
         protected string _nome;
         protected string _email;
-        public Data DataNasc { get; set; } //Auto-Propriedade
+        public Data DataNasc { get; set; } //Auto-Propriedade tem de estar public para poder aceder noutro sitio do projeto.
             
         public Funcionario()
         {

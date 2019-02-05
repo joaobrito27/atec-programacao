@@ -189,7 +189,7 @@ namespace Ficha_Trabalho_5
         
         public string toString()
         {
-            return ("Data: " + Dia + " / " + Mes+ " / " + Ano);
+            return ("Data: " + Dia.ToString() + " / " + Mes.ToString() + " / " + Ano.ToString());
         }
 
         public int difEntre2anos(Data d)

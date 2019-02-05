@@ -49,7 +49,7 @@ namespace Ficha_Trabalho_5
                  + "\nValor Hora:" + ValorH.ToString()
                  + "\nEspecialidade:" + Especialidade
                  + "\nExtensao: " + Extensao
-                 + "\nData Nascimento:" + DataNasc + " Idade: " + calcularidade().ToString()
+                 + "\nData Nascimento:" + DataNasc.toString() + " Idade: " + calcularidade().ToString()
                  ;
         }
 
