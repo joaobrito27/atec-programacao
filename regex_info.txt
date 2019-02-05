@@ -1,0 +1,29 @@
+^[0-9]{4}-[0-9]{3}$
+^\d{2}-\d{2}-\d{4}$
+^(-)?\d+(\.\d\d)?$
+
+^          início da expressão
+$          fim da expressão
+.          qualquer caracter excepto quebra de linha
+[]         conjunto ex: [0-9], [a-zA-ZçÇ]
+|          ou
+\          anula o significado
+
+?          0 ou 1 ocorrência
++          1 ocorrência ou mais
+*          0 ou n ocorrência
+{n}        exactamente n ocorrências
+{n, m}     no míniomo n ocorrências e no máximo m
+{n,}       no míniomo n ocorrências 
+{, m}      no máximo m ocorrências
+
+\d         [0-9]
+\D         tudo excepto [0-9] 
+\s         espaços, tabs, quebras de linha, parágrafos
+\S         tudo, excepto \s
+\w         [a-zA-Z0-9_]        
+
+
+
+Check Regex:
+https://regex101.com/
